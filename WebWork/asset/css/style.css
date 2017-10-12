@@ -1,0 +1,152 @@
+*{
+   margin:0;
+   padding:0;
+   /* 防止点击闪烁 */
+   -webkit-tap-highlight-color:rgba(0,0,0,0);
+   /* 缩放网页，文字大小不变 */
+   -webkit-text-size-adjust:none;
+}
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+}
+.nav{
+   background-color:#35B7F3;
+   height:60px;
+   position:fixed;
+   width:100%;
+   margin:0 auto;
+   z-index:999
+}
+.ft{
+   background-color:#35B7F3;
+   height:30px;
+   width:100%;
+   position:fixed;
+   bottom:0;
+   left:0;
+   right:0;
+   color: #ffffff;
+}
+.content {
+   margin-top: 60px;
+   margin-bottom: 30px;
+}
+.noline {
+   margin: 20px;
+}
+.noline a{
+   text-decoration:none;
+}
+ul{
+   list-style:none;
+}
+ul li{
+   float:right;
+   line-height:60px;
+   text-align:center;
+}
+ul hi{
+   float:left;
+   line-height:60px;
+   text-align:center;
+   color: #ffffff;
+}
+ul img{
+   float:left;
+   margin-left: 50px;
+}
+li a{
+   text-decoration:none;
+	color:#ffffff;
+	display:block;
+	width:90px;
+	height:60px;
+}
+a:hover{
+    background-color:#30A5DB;
+	color:#FFFFFF;
+}
+ul li ul li{
+   float:none;
+	background-color:#35B7F3;
+}
+ul li ul{
+	display:none;
+}
+/*为了兼容IE7设置的CSS样式，但是又必须写在a:hover前面*/
+ul li ul li a:link,ul li ul li a:visited{
+    background-color:#35B7F3;
+}
+ul li ul li a:hover{
+    background-color:#009933;
+}
+.slide{
+   position: relative;
+   top: 60px;
+   max-width: 100%;
+   max-height: 200px;
+   overflow: hidden;
+}
+.slide:after{
+   content: '';
+   display: block;
+   width: 100%;
+   padding-top: 50%;
+}
+.slide a{
+   color: #000000;
+}
+.slide a:hover{
+   background-color:#ffffff;
+   color:#000000;
+}
+.slide ul{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+.slide li{
+   list-style: none;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+.slide li:first-child{
+   z-index: 1;
+}
+.slide li img{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   border: none;
+}
+.slide .dot{
+   position: absolute;
+   right: 10px;
+   bottom: 10px;
+   z-index: 5;
+   font-size: 0;
+}
+.slide .dot span{
+   display: inline-block;
+   width: 5px;
+   height: 5px;
+   margin-left: 5px;
+   border: 1px solid #fff;
+   border-radius: 50%;
+}
+.slide .dot .cur{
+   background-color: #fff;
+}
+.zhong{
+   position: relative;
+   top: 60px;
+}
